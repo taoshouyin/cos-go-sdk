@@ -5,12 +5,13 @@ import (
 	"crypto/rand"
 	"encoding/base64"
 	"encoding/json"
+	"os"
+
 	"github.com/stretchr/testify/assert"
 	"github.com/taoshouyin/cos-go-sdk"
-	"github.com/taoshouyin/cos-go-sdk/crypto"
+	coscrypto "github.com/taoshouyin/cos-go-sdk/crypto"
 	"github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common"
 	kms "github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/kms/v20190118"
-	"os"
 )
 
 func (s *CosTestSuite) TestMasterKmsCipher_TestKmsClient() {
