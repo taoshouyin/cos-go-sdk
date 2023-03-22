@@ -3,8 +3,8 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/tencentyun/cos-go-sdk-v5"
-	"github.com/tencentyun/cos-go-sdk-v5/debug"
+	"github.com/taoshouyin/cos-go-sdk"
+	"github.com/taoshouyin/cos-go-sdk/debug"
 	"github.com/tencentyun/qcloud-cos-sts-sdk/go"
 	"net/http"
 	"net/url"

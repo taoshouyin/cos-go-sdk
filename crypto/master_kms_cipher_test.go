@@ -6,10 +6,10 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"github.com/stretchr/testify/assert"
+	"github.com/taoshouyin/cos-go-sdk"
+	"github.com/taoshouyin/cos-go-sdk/crypto"
 	"github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common"
 	kms "github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/kms/v20190118"
-	"github.com/tencentyun/cos-go-sdk-v5"
-	"github.com/tencentyun/cos-go-sdk-v5/crypto"
 	"os"
 )
 

@@ -5,10 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 
+	"github.com/taoshouyin/cos-go-sdk"
 	"github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common"
 	"github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common/profile"
 	kms "github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/kms/v20190118"
-	"github.com/tencentyun/cos-go-sdk-v5"
 )
 
 var (

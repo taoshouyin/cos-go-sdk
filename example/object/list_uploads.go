@@ -10,8 +10,8 @@ import (
 
 	"net/http"
 
-	"github.com/tencentyun/cos-go-sdk-v5"
-	"github.com/tencentyun/cos-go-sdk-v5/debug"
+	"github.com/taoshouyin/cos-go-sdk"
+	"github.com/taoshouyin/cos-go-sdk/debug"
 )
 
 func log_status(err error) {
@@ -82,8 +82,8 @@ func main() {
 		uploadPart(c, name, uploadID, blockSize, i)
 	}
 	opt := &cos.ObjectListUploadsOptions{
-		Prefix:       "test/test_list_parts",
-		MaxUploads:   1,
+		Prefix:     "test/test_list_parts",
+		MaxUploads: 1,
 	}
 	v, _, err := c.Object.ListUploads(context.Background(), opt)
 	if err != nil {

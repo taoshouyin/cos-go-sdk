@@ -9,8 +9,8 @@ import (
 
 	"net/http"
 
-	"github.com/tencentyun/cos-go-sdk-v5"
-	"github.com/tencentyun/cos-go-sdk-v5/debug"
+	"github.com/taoshouyin/cos-go-sdk"
+	"github.com/taoshouyin/cos-go-sdk/debug"
 )
 
 func log_status(err error) {
@@ -19,7 +19,7 @@ func log_status(err error) {
 	}
 	if cos.IsNotFoundError(err) {
 		// WARN
-        fmt.Println("WARN: Resource is not existed")
+		fmt.Println("WARN: Resource is not existed")
 	} else if e, ok := cos.IsCOSError(err); ok {
 		fmt.Printf("ERROR: Code: %v\n", e.Code)
 		fmt.Printf("ERROR: Message: %v\n", e.Message)

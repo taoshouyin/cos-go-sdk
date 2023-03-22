@@ -10,8 +10,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/tencentyun/cos-go-sdk-v5"
-	"github.com/tencentyun/cos-go-sdk-v5/debug"
+	"github.com/taoshouyin/cos-go-sdk"
+	"github.com/taoshouyin/cos-go-sdk/debug"
 )
 
 func log_status(err error) {
@@ -335,6 +335,7 @@ func ActiveWorkflow() {
 	log_status(err)
 	fmt.Printf("%+v\n", DescribeWorkflowRes)
 }
+
 // 停用工作流
 func PausedWorkflow() {
 	u, _ := url.Parse("https://test-123456789.cos.ap-jakarta.myqcloud.com")

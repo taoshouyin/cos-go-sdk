@@ -3,8 +3,8 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/tencentyun/cos-go-sdk-v5"
-	"github.com/tencentyun/cos-go-sdk-v5/debug"
+	"github.com/taoshouyin/cos-go-sdk"
+	"github.com/taoshouyin/cos-go-sdk/debug"
 	"net/http"
 	"net/url"
 	"os"
@@ -53,9 +53,9 @@ func main() {
 		// COS中的文件路径，不需要url encode
 		Key: "exampleobject",
 		/*
-		MD5: 文件 MD5 校验值, 可选
-		SuccessCallbackUrl: 回源拉取成功的回调地址，可选
-		FailureCallbackUrl: 回源拉取失败的回调地址，可选
+			MD5: 文件 MD5 校验值, 可选
+			SuccessCallbackUrl: 回源拉取成功的回调地址，可选
+			FailureCallbackUrl: 回源拉取失败的回调地址，可选
 		*/
 	}
 

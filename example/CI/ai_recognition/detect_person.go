@@ -11,8 +11,8 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/tencentyun/cos-go-sdk-v5"
-	"github.com/tencentyun/cos-go-sdk-v5/debug"
+	"github.com/taoshouyin/cos-go-sdk"
+	"github.com/taoshouyin/cos-go-sdk/debug"
 )
 
 func log_status(err error) {

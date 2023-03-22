@@ -2,7 +2,7 @@ package debug
 
 import (
 	"fmt"
-	"github.com/tencentyun/cos-go-sdk-v5"
+	"github.com/taoshouyin/cos-go-sdk"
 	"io"
 	"net/http"
 	"net/http/httputil"

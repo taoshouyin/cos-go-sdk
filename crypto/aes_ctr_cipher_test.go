@@ -6,7 +6,7 @@ import (
 	"crypto/cipher"
 	"crypto/rand"
 	"github.com/stretchr/testify/assert"
-	"github.com/tencentyun/cos-go-sdk-v5/crypto"
+	"github.com/taoshouyin/cos-go-sdk/crypto"
 	"io/ioutil"
 	math_rand "math/rand"
 )

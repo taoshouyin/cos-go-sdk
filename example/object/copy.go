@@ -12,8 +12,8 @@ import (
 	"io/ioutil"
 	"time"
 
-	"github.com/tencentyun/cos-go-sdk-v5"
-	"github.com/tencentyun/cos-go-sdk-v5/debug"
+	"github.com/taoshouyin/cos-go-sdk"
+	"github.com/taoshouyin/cos-go-sdk/debug"
 )
 
 func log_status(err error) {
@@ -22,7 +22,7 @@ func log_status(err error) {
 	}
 	if cos.IsNotFoundError(err) {
 		// WARN
-        fmt.Println("WARN: Resource is not existed")
+		fmt.Println("WARN: Resource is not existed")
 	} else if e, ok := cos.IsCOSError(err); ok {
 		fmt.Printf("ERROR: Code: %v\n", e.Code)
 		fmt.Printf("ERROR: Message: %v\n", e.Message)
@@ -44,7 +44,7 @@ func main() {
 		Transport: &cos.AuthorizationTransport{
 			// 通过环境变量获取密钥
 			// 环境变量 COS_SECRETID 表示用户的 SecretId，登录访问管理控制台查看密钥，https://console.cloud.tencent.com/cam/capi
-			SecretID:  os.Getenv("COS_SECRETID"),
+			SecretID: os.Getenv("COS_SECRETID"),
 			// 环境变量 COS_SECRETKEY 表示用户的 SecretKey，登录访问管理控制台查看密钥，https://console.cloud.tencent.com/cam/capi
 			SecretKey: os.Getenv("COS_SECRETKEY"),
 			// Debug 模式，把对应 请求头部、请求内容、响应头部、响应内容 输出到标准输出
@@ -74,7 +74,7 @@ func main() {
 	resp, err := c.Object.Get(context.Background(), dest, nil)
 	log_status(err)
 
-    bs, _ := ioutil.ReadAll(resp.Body)
+	bs, _ := ioutil.ReadAll(resp.Body)
 	resp.Body.Close()
 	result := string(bs)
 	if result != expected {

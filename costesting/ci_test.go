@@ -17,7 +17,7 @@ import (
 	//"github.com/google/uuid"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
-	"github.com/tencentyun/cos-go-sdk-v5"
+	"github.com/taoshouyin/cos-go-sdk"
 )
 
 // Define the suite, and absorb the built-in basic suite

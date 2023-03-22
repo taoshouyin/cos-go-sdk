@@ -9,8 +9,8 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/tencentyun/cos-go-sdk-v5"
-	"github.com/tencentyun/cos-go-sdk-v5/debug"
+	"github.com/taoshouyin/cos-go-sdk"
+	"github.com/taoshouyin/cos-go-sdk/debug"
 )
 
 func main() {
@@ -22,7 +22,7 @@ func main() {
 		Transport: &cos.AuthorizationTransport{
 			// 通过环境变量获取密钥
 			// 环境变量 COS_SECRETID 表示用户的 SecretId，登录访问管理控制台查看密钥，https://console.cloud.tencent.com/cam/capi
-			SecretID:  os.Getenv("COS_SECRETID"),
+			SecretID: os.Getenv("COS_SECRETID"),
 			// 环境变量 COS_SECRETKEY 表示用户的 SecretKey，登录访问管理控制台查看密钥，https://console.cloud.tencent.com/cam/capi
 			SecretKey: os.Getenv("COS_SECRETKEY"),
 			Transport: &debug.DebugRequestTransport{
